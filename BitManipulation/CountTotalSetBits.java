@@ -1,7 +1,7 @@
 package BitManipulation;
 import java.util.Scanner;
 
-//count the total number of set bits in binary representation from 1 to N numbers. Naive approach.
+//count the total number of set bits in binary representation from 1 to N numbers. Naive approach.Takes O(32n) time
 public class CountTotalSetBits {
 
 

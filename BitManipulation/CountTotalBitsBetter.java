@@ -13,24 +13,23 @@ public class CountTotalBitsBetter {
 			int val = CountTotalBitsBetter.totalCount(n);
 			System.out.print(val);
 		}
-    }
-	static int totalCount(int num) {
+	}
+
+	static int totalCount(int n) {
 		
-		num = num + 1;
-		for(int i=0; i< num; i++ ) {
-		
+		int powerOf2 = 2; 
+		int cnt = n/2;
+		while(powerOf2<=n) {
+			int totalPairs = n /powerOf2;
 			
 			
 		}
-
-
-
-		return 0;
-
-
-
+		
+		return cnt;
+		
 
 	}
-
-
 }
+
+
+
