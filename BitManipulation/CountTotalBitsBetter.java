@@ -8,7 +8,7 @@ public class CountTotalBitsBetter {
 	public static void main(String args[]) {
 
 		System.out.println("Enter a number");
-		try(Scanner sc = new Scanner(System.in) ){
+		try (Scanner sc = new Scanner(System.in)) {
 			int n = sc.nextInt();
 			int val = CountTotalBitsBetter.totalCount(n);
 			System.out.print(val);
@@ -16,20 +16,29 @@ public class CountTotalBitsBetter {
 	}
 
 	static int totalCount(int n) {
-		
-		int powerOf2 = 2; 
-		int cnt = n/2;
-		while(powerOf2<=n) {
-			int totalPairs = n /powerOf2;
-			
-			
+		if (n == 0) {
+			return 0;
 		}
-		
-		return cnt;
-		
+
+		int x = closest2power(n);
+
+		int bitstill2Power = x * (1 << (x - 1));
+		int bitsfrompowerton = (n - (1 << x) + 1);
+
+		int total = bitstill2Power + bitsfrompowerton + totalCount(bitsfrompowerton - 1);
+
+		return total;
+
+	}
+
+	static int closest2power(int n) {
+		int x = 0;
+
+		while ((1 << x) <= n) {
+			x++;
+
+		}
+		return x - 1;
 
 	}
 }
-
-
-
