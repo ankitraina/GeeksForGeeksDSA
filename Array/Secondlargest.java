@@ -1,4 +1,5 @@
 package Array;
+//does find Second largest element in the array in time O(N) but takes two traversals of the array
 
 public class Secondlargest {
 
